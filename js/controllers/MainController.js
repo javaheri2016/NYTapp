@@ -1,7 +1,6 @@
-var url = "https://api.nytimes.com/svc/topstories/v2/home.json";
-url += '?' + $.param({
-    'api-key': "ac2d7e3c5e7c482ebf51ca7395bd5b74"
-});
+var mykey = config.MY_KEY;
+var url = 'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=' + mykey;
+
 
 app.controller('MainController', function ($scope, $http) {
 

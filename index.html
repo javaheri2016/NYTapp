@@ -117,12 +117,13 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" id="content" ng-cloak>
                 <h3 class="top-stories">Top stories</h3>
                 <div class="row row-dates">
-                        <p> Choose a range of dates</p>
-                        
-                        <div class="col-lg-6 col-md-12">From: <input ng-model="dateFrom" type="text" placeholder="" /></div>
-                            <div class="col-lg-6 col-md-12">To: <input ng-model="dateTo" type="text" placeholder="" /></div>
-                    <hr></div>
-                      <div class="row">
+                    <p> Choose a range of dates</p>
+
+                    <div class="col-lg-6 col-md-12">From: <input ng-model="dateFrom" type="text" placeholder="" /></div>
+                    <div class="col-lg-6 col-md-12">To: <input ng-model="dateTo" type="text" placeholder="" /></div>
+                    <hr>
+                </div>
+                <div class="row">
                     <div ng-repeat="story in list | dateFilter:dateKey:dateFrom:dateTo">
 
                         <div class="col-lg-3 col-md-12">
@@ -185,7 +186,7 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script type='text/javascript' src='js/config.js'></script>
     <script src="js/app.js" type="text/javascript"></script>
 
     <script src="js/controllers/MainController.js"></script>
