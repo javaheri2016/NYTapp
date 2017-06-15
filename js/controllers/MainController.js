@@ -10,10 +10,13 @@ app.controller('MainController', function ($scope, $http) {
     $scope.dateKey = 'date';
 
     $http({
-            method: 'GET',
-            url: url,
-        }).then(function success(result) {
-            for (i = 0; i < result.data.results.length; i++) {
+        method: 'GET',
+        url: url,
+    }).then(function success(result) {
+
+        for (i = 0; i < result.data.results.length; i++) {
+            if (result.data.results[i].multimedia[1] != undefined) {
+
                 var story = {
                     title: result.data.results[i].title,
                     abstract: result.data.results[i].abstract,
@@ -23,18 +26,28 @@ app.controller('MainController', function ($scope, $http) {
                 }
 
                 $scope.list.push(story);
+            } else {
+                var story = {
+                    title: result.data.results[i].title,
+                    abstract: result.data.results[i].abstract,
+                    url: result.data.results[i].url,
+                    date: result.data.results[i].published_date,
+                    image: 'http://javaheri.pl/NYTapp/img/noimage.png',
+                }
+                $scope.list.push(story);
             }
-
-
-
             console.log(story);
-        }),
+        }
+    });
 
-        function error(err) {
-            throw err;
-        };
 
+    function error(err) {
+        throw err;
+    };
 });
+
+
+
 
 app.filter("dateFilter", function () {
     return function (items, dateKey, dateFrom, dateTo) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -27,7 +27,6 @@
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
 </head>
 
@@ -75,7 +74,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>The New York Time API App</h1>
+                        <h1>The New York Times API App</h1>
                         <hr class="small">
                         <span class="subheading">Data provided by The New York Times</span>
                     </div>
@@ -119,8 +118,8 @@
                 <div class="row row-dates">
                     <p> Choose a range of dates</p>
 
-                    <div class="col-lg-6 col-md-12">From: <input ng-model="dateFrom" type="text" placeholder="" /></div>
-                    <div class="col-lg-6 col-md-12">To: <input ng-model="dateTo" type="text" placeholder="" /></div>
+                    <div class="col-lg-6 col-md-12">From: <input ng-model="dateFrom" type="date" placeholder="" /></div>
+                    <div class="col-lg-6 col-md-12">To: <input ng-model="dateTo" type="date" placeholder="" /></div>
                     <hr>
                 </div>
                 <div class="row">
@@ -186,12 +185,10 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type='text/javascript' src='js/config.js'></script>
+    <script type="text/javascript" src="js/config.js"></script>
     <script src="js/app.js" type="text/javascript"></script>
-
     <script src="js/controllers/MainController.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.0/moment.js"></script>
-
 
 </body>
 
